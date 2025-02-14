@@ -33,6 +33,8 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>Bu uygulama, fotoğraf kütüphanesinden resim yüklemek için erişime ihtiyaç duyar.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
