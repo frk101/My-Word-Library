@@ -17,7 +17,7 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {AuthStackParamsList} from '../../navigation/types';
 import {register} from '../../actions/auth';
 const {width} = Dimensions.get('window');
-type Props = NativeStackScreenProps<AuthStackParamsList, 'Login'>;
+type Props = NativeStackScreenProps<AuthStackParamsList, 'Register'>;
 
 const RegisterScreen: React.FC<Props> = ({navigation}) => {
   const [email, setEmail] = useState(__DEV__ ? 'frkalbayrak101@gmail.com' : '');
@@ -44,9 +44,7 @@ const RegisterScreen: React.FC<Props> = ({navigation}) => {
             style={styles.scrollContainer}
             contentContainerStyle={styles.content}
             showsVerticalScrollIndicator={false}>
-            <AnimatedImage
-              source={require('../../../assets/images/user.png')}
-            />
+            <AnimatedImage source={require('../../../assets/user.png')} />
             <Input
               text={'Email'}
               value={email}

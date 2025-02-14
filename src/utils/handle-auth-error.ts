@@ -2,20 +2,20 @@ import Toast from 'react-native-toast-message';
 
 export const handleAuthError = (error: any) => {
   const errorMessages: Record<string, string> = {
-    'auth/invalid-email': 'Geçersiz e-posta adresi!',
-    'auth/user-disabled': 'Bu kullanıcı devre dışı bırakılmış.',
-    'auth/user-not-found': 'Böyle bir kullanıcı bulunamadı.',
-    'auth/wrong-password': 'Şifre yanlış.',
-    'auth/email-already-in-use': 'Bu e-posta adresi zaten kullanılıyor.',
-    'auth/weak-password': 'Şifre çok zayıf, lütfen daha güçlü bir şifre seçin.',
-    'auth/network-request-failed': 'İnternet bağlantınızı kontrol edin.',
+    'auth/invalid-email': 'Invalid email address!',
+    'auth/user-disabled': 'This user has been disabled.',
+    'auth/user-not-found': 'No user found with this email.',
+    'auth/wrong-password': 'Incorrect password.',
+    'auth/email-already-in-use': 'This email address is already in use.',
+    'auth/weak-password': 'Weak password, please choose a stronger one.',
+    'auth/network-request-failed': 'Check your internet connection.',
   };
 
   const message =
     errorMessages[error.code] || `Bilinmeyen bir hata oluştu: ${error.message}`;
   Toast.show({
     type: 'error',
-    text1: 'Hata',
+    text1: 'Error',
     text2: message,
   });
 };

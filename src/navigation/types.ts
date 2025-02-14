@@ -1,6 +1,9 @@
+import {Word} from '../hooks/useWords';
+
 export type RootStackParamList = {
   MainStack: undefined;
   AuthStack: undefined;
+  Loading: undefined;
 };
 
 export type AuthStackParamsList = {
@@ -10,5 +13,6 @@ export type AuthStackParamsList = {
 
 export type MainStackParamsList = {
   WordList: undefined;
-  WordForm: undefined;
+  Profile: undefined;
+  WordForm: {word?: Word};
 };

@@ -43,9 +43,7 @@ const LoginScreen: React.FC<Props> = ({navigation}) => {
             style={styles.scrollContainer}
             contentContainerStyle={styles.content}
             showsVerticalScrollIndicator={false}>
-            <AnimatedImage
-              source={require('../../../assets/images/login.png')}
-            />
+            <AnimatedImage source={require('../../../assets/login.png')} />
             <Input
               text={'Email'}
               value={email}

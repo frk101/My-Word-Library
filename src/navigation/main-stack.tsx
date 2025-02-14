@@ -8,16 +8,8 @@ const Stack = createNativeStackNavigator<MainStackParamsList>();
 const MainStack: React.FC = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen
-        name="WordList"
-        component={Screens.Main.WordListScreen}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="WordForm"
-        component={Screens.Main.WordFormScreen}
-        options={{headerShown: false}}
-      />
+      <Stack.Screen name="WordList" component={Screens.Main.WordListScreen} />
+      <Stack.Screen name="WordForm" component={Screens.Main.WordFormScreen} />
     </Stack.Navigator>
   );
 };

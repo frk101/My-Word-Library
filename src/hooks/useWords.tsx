@@ -4,10 +4,10 @@ import firestore, {
 } from '@react-native-firebase/firestore';
 
 // Kelime tipini tanımla
-interface Word {
+export interface Word {
   id: string;
-  word: string;
-  translation: string;
+  turkish: string;
+  english: string;
   learned: boolean;
   createdAt?: FirebaseFirestoreTypes.Timestamp;
 }
@@ -18,7 +18,7 @@ export const useWords = (): Word[] => {
 
   useEffect(() => {
     const unsubscribe = firestore()
-      .collection('kelimeler')
+      .collection('words')
       .orderBy('createdAt', 'desc')
       .onSnapshot(querySnapshot => {
         const wordsArray: Word[] = querySnapshot.docs.map(doc => ({
